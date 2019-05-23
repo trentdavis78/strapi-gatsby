@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Parallax from "../components/parallax"
 import Section from "../components/section"
 import RowContainer from "../components/rowContainer"
-import Card from "../components/card";
+import HorzCardSm from "../components/horzCardSm";
 
 const IndexPage = () => (
   <Layout>
@@ -13,10 +13,10 @@ const IndexPage = () => (
     <Section styleName={"bg-white"}>
       <RowContainer color={"white"}>
         <h6 className="category-header">Recent Articles</h6>
-         <Card />       
-         <Card />     
-         <Card />     
-         <Card />     
+         <HorzCardSm />       
+         <HorzCardSm />     
+         <HorzCardSm />     
+         <HorzCardSm />     
       </RowContainer>
     </Section>
     <Parallax imgPath="assets/images/parallax2.jpg" altTag="Austin Skyline" />

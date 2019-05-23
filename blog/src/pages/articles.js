@@ -11,17 +11,44 @@ const Articles = ({ data }) => (
     <SEO title="Articles" />
     <Section styleName={"bg-white"}>
      <RowContainer color={"white"}>
-        <ul>
+        {/* <ul>
           {data.allStrapiArticle.edges.map(document => (
             <li key={document.node.id}>
               <h2>
                 <Link to={`/articles/${document.node.id}`}>{document.node.title}</Link>
               </h2>
-              <Img fixed={document.node.image.childImageSharp.fixed}/>
+              <Img fluid={document.node.image.childImageSharp.fluid}/>
               <p>{document.node.content}</p>
             </li>
           ))}
-        </ul>
+        </ul> */}
+        <div className="row">
+          <div className="col l9">
+            <div className="row">
+              <div className="col s12 m8 l8">
+                {data.allStrapiArticle.edges.map(document => (
+                <div key={document.node.id}>                  
+                  <Img fluid={document.node.image.childImageSharp.fluid}/>
+                  <h4>
+                    <Link to={`/articles/${document.node.id}`}>{document.node.title}</Link>
+                  </h4>
+                </div>
+              ))}
+            </div>
+            <div className="col s12 m4 l4">
+                {data.allStrapiArticle.edges.map(document => (
+                <div key={document.node.id}>                  
+                  <Img fluid={document.node.image.childImageSharp.fluid}/>
+                  <h6>
+                    <Link to={`/articles/${document.node.id}`}>{document.node.title}</Link>
+                  </h6>
+                </div>
+              ))}
+            </div>
+            </div>
+          </div>
+          <div className="col m3 l3 hide-on-small-only blue" style={{minHeight:600}}></div>
+          </div>        
      </RowContainer>
     </Section>
   </Layout>
@@ -38,8 +65,8 @@ export const pageQuery = graphql`
           id
           image {
             childImageSharp {
-              fixed(width: 200, height: 125) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 960) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

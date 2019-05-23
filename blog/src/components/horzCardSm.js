@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function card() {
+export default function horzCardSm() {
     return (
         <div className="col s12 m6 l6">
           <div className="card horizontal">
