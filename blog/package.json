@@ -12,7 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.37",
     "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-source-strapi": "0.0.8",
+    "gatsby-source-strapi": "3.0.4",
     "gatsby-transformer-sharp": "^2.1.19",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "^2.24.0",
